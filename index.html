@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Velvet Chef</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav>
+        <a href="#" class="logo">The Velvet Chef</a>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Menu</a>
+            <a href="#">Reservations</a>
+            <a href="#">About Us</a>
+            <a href="#">Gallery</a>
+            <a href="#">Events</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Order Online</a>
+
+        </div>
+        <!-- Hamburger icon -->
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <h1>Welcome to The Velvet Chef</h1>
+        <p>Where culinary art meets elegance. Indulge in the finest dining experience.</p>
+        <a href="#menu">Explore Our Menu</a>
+    </section>
+
+    <section class="menu-section" id="menu">
+        <h2>Our Menu</h2>
+
+        <!-- Filter Buttons -->
+        <div class="menu-filter">
+            <button onclick="filterMenu('all')">All</button>
+            <button onclick="filterMenu('starters')">Starters</button>
+            <button onclick="filterMenu('mains')">Main Courses</button>
+            <button onclick="filterMenu('desserts')">Desserts</button>
+        </div>
+
+        <!-- Menu List -->
+        <div class="menu-list">
+            <!-- Menu Item - Grilled Steak -->
+            <div class="menu-item starters">
+                <img src="" alt="" class="menu-img">
+                <h3>Grilled Steak</h3>
+                <p>Juicy grilled steak with a side of garlic mashed potatoes and vegetables.</p>
+                <span class="price">$25.00</span>
+            </div>
+
+            <!-- Menu Item - Chicken Alfredo -->
+            <div class="menu-item mains">
+                <img src="" alt="" class="menu-img">
+                <h3>Chicken Alfredo</h3>
+                <p>Creamy Alfredo sauce with grilled chicken and fettuccine pasta.</p>
+                <span class="price">$18.00</span>
+            </div>
+
+            <!-- Menu Item - Caesar Salad -->
+            <div class="menu-item starters">
+                <img src="" alt="" class="menu-img">
+                <h3>Caesar Salad</h3>
+                <p>Fresh romaine lettuce with Caesar dressing, croutons, and parmesan cheese.</p>
+                <span class="price">$12.00</span>
+            </div>
+
+            <!-- Menu Item - Margherita Pizza -->
+            <div class="menu-item mains">
+                <img src="" alt="" class="menu-img">
+                <h3>Margherita Pizza</h3>
+                <p>Classic pizza with fresh tomatoes, basil, and mozzarella.</p>
+                <span class="price">$15.00</span>
+            </div>
+
+            <!-- Menu Item - Salmon Filet -->
+            <div class="menu-item mains">
+                <img src="" alt="" class="menu-img">
+                <h3>Salmon Filet</h3>
+                <p>Grilled salmon served with steamed vegetables and rice.</p>
+                <span class="price">$22.00</span>
+            </div>
+
+            <!-- Menu Item - Beef Tacos -->
+            <div class="menu-item mains">
+                <img src="" alt="" class="menu-img">
+                <h3>Beef Tacos</h3>
+                <p>Soft tacos with seasoned beef, lettuce, cheese, and salsa.</p>
+                <span class="price">$10.00</span>
+            </div>
+
+            <!-- Menu Item - Lobster Bisque -->
+            <div class="menu-item starters">
+                <img src="" alt="" class="menu-img">
+                <h3>Lobster Bisque</h3>
+                <p>Rich and creamy lobster soup with a hint of brandy.</p>
+                <span class="price">$8.00</span>
+            </div>
+
+            <!-- Menu Item - Stuffed Mushrooms -->
+            <div class="menu-item starters">
+                <img src="" alt="" class="menu-img">
+                <h3>Stuffed Mushrooms</h3>
+                <p>Delicious mushrooms stuffed with cheese and herbs, served warm.</p>
+                <span class="price">$12.00</span>
+            </div>
+
+            <!-- Menu Item - Spaghetti Carbonara -->
+            <div class="menu-item mains">
+                <img src="" alt="" class="menu-img">
+                <h3>Spaghetti Carbonara</h3>
+                <p>Classic Italian carbonara with pancetta, egg, and parmesan cheese.</p>
+                <span class="price">$16.00</span>
+            </div>
+
+            <!-- Menu Item - Eggplant Parmesan -->
+            <div class="menu-item mains">
+                <img src="" alt="" class="menu-img">
+                <h3>Eggplant Parmesan</h3>
+                <p>Fried eggplant topped with marinara sauce and mozzarella, served with pasta.</p>
+                <span class="price">$14.00</span>
+            </div>
+
+            <!-- Menu Item - Grilled Shrimp Skewers -->
+            <div class="menu-item mains">
+                <img src="" alt="" class="menu-img">
+                <h3>Grilled Shrimp Skewers</h3>
+                <p>Perfectly grilled shrimp served with a tangy lemon dipping sauce.</p>
+                <span class="price">$20.00</span>
+            </div>
+
+            <!-- Menu Item - Vegetable Stir-fry -->
+            <div class="menu-item mains">
+                <img src="" alt="" class="menu-img">
+                <h3>Vegetable Stir-fry</h3>
+                <p>Stir-fried vegetables served with rice and soy sauce.</p>
+                <span class="price">$13.00</span>
+            </div>
+
+            <!-- Menu Item - Roast Chicken -->
+            <div class="menu-item mains">
+                <img src="" alt="" class="menu-img" />
+                <h3>Roast Chicken</h3>
+                <p>Herb-seasoned roast chicken with mashed potatoes and green beans.</p>
+                <span class="price">$18.00</span>
+            </div>
+
+            <!-- Menu Item - Cheese Platter -->
+            <div class="menu-item desserts">
+                <img src="" alt="" class="menu-img">
+                <h3>Cheese Platter</h3>
+                <p>A selection of the finest cheeses served with crackers and fruit.</p>
+                <span class="price">$12.00</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="reservations" id="reservations">
+        <div class="container">
+            <h2 class="section-title animate">Make a Reservation</h2>
+            <p class="section-subtitle animate">Reserve your table today and enjoy a luxurious dining experience at The Velvet Chef.</p>
+
+            <form class="reservation-form animate">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Reservation Date</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="time">Reservation Time</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="guests">Number of Guests</label>
+                    <select id="guests" name="guests" required>
+                        <option value="">Select guests</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5+">5+</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-reserve">Reserve Now</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="gallery-title">Gallery</h2>
+            <div class="gallery-tabs">
+                <button class="tab active" data-category="dishes">Our Dishes</button>
+                <button class="tab" data-category="ambiance">Ambiance</button>
+                <button class="tab" data-category="events">Special Events</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <!-- Example Dishes -->
+                <div class="gallery-item" data-category="dishes">
+                    <img src="dish.jpeg" alt="Dish 1" class="gallery-image">
+                </div>
+                <div class="gallery-item" data-category="dishes">
+                    <img src="dish1.jpeg" alt="Dish 2" class="gallery-image">
+                </div>
+
+                <!-- Example Ambiance -->
+                <div class="gallery-item" data-category="ambiance" style="display: none;">
+                    <img src="interior1.jpeg" alt="Interior 1" class="gallery-image">
+                </div>
+                <div class="gallery-item" data-category="ambiance" style="display: none;">
+                    <img src="interior.jpeg" alt="Interior 2" class="gallery-image">
+                </div>
+
+                <!-- Example Events -->
+                <div class="gallery-item" data-category="events" style="display: none;">
+                    <img src="event1.jpeg" alt="Event 1" class="gallery-image">
+                </div>
+                <div class="gallery-item" data-category="events" style="display: none;">
+                    <img src="event.jpeg" alt="Event 2" class="gallery-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="lightbox">
+        <img src="" alt="" class="lightbox-image">
+        <span class="close-lightbox">&times;</span>
+    </div>
+
+    <section id="events" class="events-section">
+        <div class="container">
+            <h2 class="events-title">Upcoming Events</h2>
+            <p class="events-subtitle">Join us for memorable dining experiences and special celebrations.</p>
+
+            <!-- Slider Wrapper -->
+            <div class="slider-container">
+                <div class="slider-track">
+                    <div class="slider-item">
+                        <img src="wine.jpeg" alt="Wine Tasting Night">
+                        <div class="event-details">
+                            <h3>Wine Tasting Night</h3>
+                            <p>Date: January 25, 2025</p>
+                            <p>Explore a selection of premium wines with expert sommeliers.</p>
+                            <a href="#" class="btn">Reserve Now</a>
+                        </div>
+                    </div>
+                    <div class="slider-item">
+                        <img src="jazz.jpeg" alt="Live Jazz Dinner">
+                        <div class="event-details">
+                            <h3>Live Jazz Dinner</h3>
+                            <p>Date: February 10, 2025</p>
+                            <p>Enjoy a delightful evening of jazz music and gourmet dishes.</p>
+                            <a href="#" class="btn">Book a Table</a>
+                        </div>
+                    </div>
+                    <div class="slider-item">
+                        <img src="valentine.jpeg" alt="Valentine's Day Special">
+                        <div class="event-details">
+                            <h3>Valentine's Day Special</h3>
+                            <p>Date: February 14, 2025</p>
+                            <p>A romantic evening with a curated menu for two.</p>
+                            <a href="#" class="btn">Reserve Your Spot</a>
+                        </div>
+                    </div>
+                    <div class="slider-item">
+                        <img src="family.jpeg" alt="Valentine's Day Special">
+                        <div class="event-details">
+                            <h3>Family Brunch Sundays</h3>
+                            <p>Date: February 14, 2025</p>
+                            <p>A kid-friendly brunch with live cooking stations, kids’ activities, and signature dishes.</p>
+                            <a href="#" class="btn">Reserve Your Spot</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Controls -->
+                <button class="slider-btn prev-btn">&#10094;</button>
+                <button class="slider-btn next-btn">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

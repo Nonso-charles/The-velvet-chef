@@ -18,12 +18,14 @@ nav {
 }
 
 .logo {
-    color: #f7e7ce;
-    font-size: 24px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-img {
+ width: 50px;
+ max-height: 50px;
 }
 
 .nav-links {
@@ -51,8 +53,11 @@ nav {
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     right: 30px;
+    top: 30px;
 }
 
 .hamburger div {
@@ -743,6 +748,11 @@ select:focus {
 
     .hamburger {
         display: flex;
+    }
+    
+    .logo {
+        justify-content: center;
+        flex: 1;
     }
 
     .menu-filter button {

@@ -488,6 +488,240 @@ select:focus {
     right: 10px;
 }
 
+/* General Footer Styles */
+.footer {
+  background-color: #5c1a33;
+  color: #f7f7f7;
+  padding: 3rem 1rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Footer Content */
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer-content div {
+  flex: 1 1 calc(25% - 2rem);
+  min-width: 250px;
+}
+
+.footer h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #FF4500;
+}
+
+.footer p,
+.footer ul {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #d9d9d9;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer ul li a {
+  color: #d9d9d9;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer ul li a:hover {
+  color: #FF4500;
+}
+
+/* Social Media */
+.footer-social ul {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-social ul li {
+  font-size: 1.5rem;
+}
+
+.footer-social ul li a {
+  color: #f7f7f7;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.footer-social ul li a:hover {
+  color: #FF4500;
+  transform: scale(1.1);
+}
+
+/* Newsletter */
+.footer-newsletter input {
+  width: 70%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  margin-right: -1px;
+}
+
+.footer-newsletter button {
+  padding: 0.8rem 1rem;
+  border: none;
+  background-color: #FF4500;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  transition: background-color 0.3s;
+}
+
+.footer-newsletter button:hover {
+  background-color: #333;
+}
+
+.newsletter-form {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.newsletter-form input:focus {
+  outline: 2px solid #FF4500;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* Animations */
+.footer h3 {
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+.footer p,
+.footer ul li,
+.footer-newsletter {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.footer-social ul li {
+  animation: slideIn 1s ease-in-out;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Back to Top Button */
+#back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #FF4500;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 1000;
+}
+
+#back-to-top:hover {
+  background-color: #333;
+  transform: scale(1.1);
+}
+
+/* Show Button on Scroll */
+#back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceOnHover {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Apply Animation */
+#back-to-top.show {
+  animation: fadeInUp 0.6s ease-in-out;
+}
+
+#back-to-top:hover {
+  animation: bounceOnHover 1s ease-in-out;
+}
+
+
 
 @media (max-width: 768px) {
     nav {
@@ -515,5 +749,26 @@ select:focus {
         flex: 0 0 45%;
         text-align: center;
     }
+   
+     .footer-content {
+      flex-direction: column;
+      text-align: center;
+  }
 
+  .footer-newsletter input {
+      width: 100%;
+      margin: 0 0 0.5rem 0;
+  }
+
+  .footer-newsletter button {
+      width: 100%;
+      border-radius: 5px;
+  }
+  
+    #back-to-top {
+      bottom: 20px;
+      right: 20px;
+      padding: 0.6rem 1rem;
+      font-size: 0.9rem;
+  }
 }

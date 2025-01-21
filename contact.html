@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Us</title>
+    
+    <style>
+        /* Animations */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Hidden Class */
+.hidden {
+  display: none;
+}
+
+/* Contact Section Animations */
+[data-animate="fade-in-left"] {
+  opacity: 0;
+  animation: fadeInLeft 1s forwards;
+}
+
+[data-animate="fade-in-right"] {
+  opacity: 0;
+  animation: fadeInRight 1s forwards;
+}
+
+.contact-wrapper .map-container {
+  margin-top: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.contact-wrapper .map-container iframe {
+  width: 100%;
+  height: 200px;
+}
+
+.map-toggle-btn {
+  margin-top: 1rem;
+  background-color: #5c1a33;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.map-toggle-btn:hover {
+  background-color: #4b1529;
+}
+
+.form-success {
+  margin-top: 1rem;
+  color: #28a745;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Contact Section */
+.contact {
+  padding: 4rem 1rem;
+  background-color: #5c1a33;
+  color: #333;
+}
+
+.contact .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #5c1a33;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #666;
+}
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Contact Info */
+.contact-info {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #5c1a33;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info i {
+  margin-right: 10px;
+  color: #5c1a33;
+}
+
+.contact-info iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+  margin-top: 1.5rem;
+  border-radius: 10px;
+}
+
+/* Contact Form */
+.contact-form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #5c1a33;
+}
+
+.contact-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #5c1a33;
+}
+
+.contact-form .btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background-color: #5c1a33;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form .btn:hover {
+  background-color: #4b1529;
+}
+
+
+    </style>
+</head>
+
+<body>
+<section class="contact" id="contact">
+  <div class="container">
+    <!-- Section Title -->
+    <h2 class="section-title">Get in Touch</h2>
+    <p class="section-subtitle">
+      We'd love to hear from you! Contact us for reservations, inquiries, or feedback.
+    </p>
+
+    <!-- Contact Details and Form -->
+    <div class="contact-wrapper">
+      <!-- Contact Info -->
+      <div class="contact-info" data-animate="fade-in-left">
+        <h3>Contact Details</h3>
+        <p><i class="fas fa-map-marker-alt"></i> 123 Gourmet Street, Food City</p>
+        <p><i class="fas fa-envelope"></i> contact@thevelvetchef.com</p>
+        <p><i class="fas fa-phone-alt"></i> +1 555 123 4567</p>
+
+        <!-- Expandable Map -->
+        <button class="map-toggle-btn" onclick="toggleMap()">Toggle Map</button>
+        <div class="map-container hidden" id="map-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.875438845287!2d-122.41941608468152!3d37.77492977975816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064b5c2e8d3%3A0x43b0c2af9a23f2c2!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2s!4v1688660530195!5m2!1sen!2s" 
+            allowfullscreen="" 
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form" data-animate="fade-in-right">
+        <h3>Send a Message</h3>
+        <form id="contact-form">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Your Email" required />
+          </div>
+          <div class="form-group">
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn">Submit</button>
+        </form>
+        <div id="form-success" class="form-success hidden">Thank you! Your message has been sent.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+    // Fade-in animation on scroll
+document.addEventListener('DOMContentLoaded', () => {
+  const elements = document.querySelectorAll('[data-animate]');
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationDelay = '0.2s';
+          entry.target.style.animationPlayState = 'running';
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  elements.forEach((el) => {
+    observer.observe(el);
+  });
+});
+
+// Toggle Map
+function toggleMap() {
+  const mapContainer = document.getElementById('map-container');
+  mapContainer.classList.toggle('hidden');
+}
+
+// Form Submission Handling
+document.getElementById('contact-form').addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  // Simulate form submission
+  setTimeout(() => {
+    document.getElementById('form-success').classList.remove('hidden');
+  }, 500);
+
+  // Clear form fields
+  e.target.reset();
+});
+
+</script>
+</body>
+
+</html>

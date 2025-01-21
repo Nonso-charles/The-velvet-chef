@@ -104,3 +104,24 @@ setInterval(() => {
     currentIndex = (currentIndex + 1) % slides.length;
     updateSliderPosition();
 }, 5000);
+
+
+// Back to Top Button Logic
+const backToTopBtn = document.getElementById("back-to-top");
+
+// Show button on scroll
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 200) {
+    backToTopBtn.classList.add("show");
+  } else {
+    backToTopBtn.classList.remove("show");
+  }
+});
+
+// Scroll to top when clicked
+backToTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
